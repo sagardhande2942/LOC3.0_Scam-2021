@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Users(models.Model):
-    id = models.AutoField(primary_key=True, default='')
+    
     first_name = models.CharField(max_length = 30, default='', null = True, blank=True)
     last_name = models.CharField(max_length = 30, default='', null = True, blank=True)
     email = models.EmailField(max_length = 30, default='', null = True, blank=True)

@@ -69,12 +69,8 @@ WSGI_APPLICATION = 'Scam2021.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'clin',
-        'HOST': 'agri.cj9kv3v4akuv.us-east-2.rds.amazonaws.com',
-        'PORT': '3306',
-        'USER': 'inferno',
-        'PASSWORD': 'vishal2942'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 
 }
