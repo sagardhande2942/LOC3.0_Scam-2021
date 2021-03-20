@@ -12,13 +12,13 @@ class Users(models.Model):
         return self.firstname
 
 class Patient(models.Model):
-    p_id = models.ForeignKey(Users, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.p_id.firstname
+        return self.user_id.firstname
 
 class Doctor(models.Model):
-    d_id = models.ForeignKey(Users, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
     spec = (
         ('Dentist', 'Dentist'),
         ('Cardiologitst','Cardiologitst'),
@@ -27,4 +27,4 @@ class Doctor(models.Model):
     d_qualif = models.CharField(choices=spec,null = True, blank=True, max_length=30)
 
     def __str__(self):
-        return self.d_id.firstname
+        return self.user_id.firstname

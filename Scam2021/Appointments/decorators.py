@@ -1,9 +1,9 @@
 from django.core.exceptions import PermissionDenied
-from Authentication.models import User
+from Auth.models import Users
 
 def user_is_doctor(function):
     def wrap(request, *args, **kwargs):
-        user = User.objects.get(pk=kwargs['user_id'])
+        user = Users.objects.get(pk=kwargs['user_id'])
         if user.is_doctor == True:
             return function(request, *args, **kwargs)
         else:
@@ -15,7 +15,7 @@ def user_is_doctor(function):
 
 def user_is_patient(function):
     def wrap(request, *args, **kwargs):
-        user = User.objects.get(pk=kwargs['user_id'])
+        user = Users.objects.get(pk=kwargs['user_id'])
         if user.is_doctor == False:
             return function(request, *args, **kwargs)
         else:

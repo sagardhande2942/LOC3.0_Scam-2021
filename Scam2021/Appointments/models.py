@@ -1,5 +1,5 @@
 from django.db import models
-from Authentication.models import Patient, Doctor
+from Auth.models import Patient, Doctor
 
 
 class Appointment(models.Model):
