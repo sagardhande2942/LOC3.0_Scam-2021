@@ -70,7 +70,7 @@ WSGI_APPLICATION = 'Scam2021.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Scam',
+        'NAME': 'clin',
         'HOST': 'agri.cj9kv3v4akuv.us-east-2.rds.amazonaws.com',
         'PORT': '3306',
         'USER': 'inferno',
@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

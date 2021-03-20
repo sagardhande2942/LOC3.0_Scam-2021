@@ -14,11 +14,11 @@ def register(request):
         
         pdcheck = request.POST.get('pdcheck','false')
         if pdcheck == 'false':
-            obj = Users.objects.create(email = demail, firstname = dfirstname, lastname = dlastname, contact = dcontact ,password = dpass)
+            obj = Users.objects.create(email = demail, first_name = dfirstname, last_name = dlastname, contact = dcontact ,password = dpass)
             b = Patient.objects.create(user_id = obj)
         else:
             dspec = request.POST.get('spec','')
-            obj = Users.objects.create(email = demail, firstname = dfirstname, contact = dcontact, lastname = dlastname, password = dpass)
+            obj = Users.objects.create(email = demail, first_name = dfirstname, contact = dcontact, last_name = dlastname, password = dpass)
             b = Doctor.objects.create(user_id = obj, d_qualif = dspec)
     return render(request, 'Auth/login.html')
 
