@@ -3,21 +3,17 @@ from .models import *
 
 def register(request):
     if request.method == 'POST':
+        demail = request.POST.get('email','')
+        dcontact = request.POST.get('contact',1234567890)
+        dfirstname = request.POST.get('fname','')
+        dlastname = request.POST.get('lname','')
+        dpass = request.POST.get('pass','')
+        
         pdcheck = request.POST.get('pdcheck','false')
         if pdcheck == 'false':
-            pemail = request.POST.get('email','')
-            pcontact = request.POST.get('contact',1234567890)
-            pfirstname = request.POST.get('fname','')
-            plastname = request.POST.get('lname','')
-            ppass = request.POST.get('pass','')
-            obj = Users.objects.create(email = pemail, firstname = pfirstname, lastname = plastname, contact = pcontact ,password = ppass)
+            obj = Users.objects.create(email = demail, firstname = dfirstname, lastname = dlastname, contact = dcontact ,password = dpass)
             b = Patient.objects.create(user_id = obj)
         else:
-            demail = request.POST.get('email','')
-            dcontact = request.POST.get('contact',1234567890)
-            dfirstname = request.POST.get('fname','')
-            dlastname = request.POST.get('lname','')
-            dpass = request.POST.get('pass','')
             dspec = request.POST.get('spec','')
             obj = Users.objects.create(email = demail, firstname = dfirstname, contact = dcontact, lastname = dlastname, password = dpass, d_qualif = dspec)
             b = Doctor.objects.create(user_id = obj)
