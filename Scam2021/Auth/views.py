@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import *
 
+def index(request):
+    return render(request, 'Auth/index.html')
+
 def register(request):
     if request.method == 'POST':
         demail = request.POST.get('email','')
@@ -15,9 +18,9 @@ def register(request):
             b = Patient.objects.create(user_id = obj)
         else:
             dspec = request.POST.get('spec','')
-            obj = Users.objects.create(email = demail, firstname = dfirstname, contact = dcontact, lastname = dlastname, password = dpass, d_qualif = dspec)
-            b = Doctor.objects.create(user_id = obj)
-    return render(request, '')
+            obj = Users.objects.create(email = demail, firstname = dfirstname, contact = dcontact, lastname = dlastname, password = dpass)
+            b = Doctor.objects.create(user_id = obj, d_qualif = dspec)
+    return render(request, 'Auth/login.html')
 
 def login(request):
     if request == 'POST':
