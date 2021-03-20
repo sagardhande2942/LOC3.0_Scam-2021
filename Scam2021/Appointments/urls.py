@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from .views import book, approve, find_doctor
 
 urlpatterns = [
     path('book/<int:doctor_id>/', book),
