@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User 
 
 
 class Users(models.Model):
@@ -8,9 +9,8 @@ class Users(models.Model):
     lastname = models.CharField(max_length=20, default='',null = True, blank=True)
     password = models.CharField(max_length=30, default='')
     contact = models.IntegerField(default='',null = True, blank=True)
-
     def __str__(self):
-        return self.firstname
+        return self.first_name
 
 class Patient(models.Model):
     user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
