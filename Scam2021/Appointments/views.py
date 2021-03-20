@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import *
-from Auth.models import *
+from .models import Appointment
+from Auth.models import Patient, Doctor
 from .decorators import *
 from django.contrib.auth.decorators import login_required
 import datetime
