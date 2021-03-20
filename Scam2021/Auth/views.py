@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import *
 
 def index(request):
-    return render(request, 'Auth/index.html')
+    return render(request, 'Auth/login.html')
 
 def register(request):
     if request.method == 'POST':
@@ -20,7 +20,7 @@ def register(request):
             dspec = request.POST.get('spec','')
             obj = Users.objects.create(email = demail, first_name = dfirstname, contact = dcontact, last_name = dlastname, password = dpass)
             b = Doctor.objects.create(user_id = obj, d_qualif = dspec)
-    return render(request, 'Auth/login.html')
+    return render(request, 'Auth/Registration.html')
 
 def login(request):
     if request == 'POST':
@@ -34,7 +34,7 @@ def login(request):
                 check = True
             
             if check == True:
-                return render(request, '...')
+                return render(request, 'login')
 
         else:
             demail = request.POST.get('email','')
@@ -44,4 +44,4 @@ def login(request):
             if d.password == dpass:
                 check = True
             if check == True:
-                return render(request, '...')
+                return render(request, 'login')
