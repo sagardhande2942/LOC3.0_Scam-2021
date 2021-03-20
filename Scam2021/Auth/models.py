@@ -1,8 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User 
 
 
-class Users(User):
+class Users(models.Model):
+    
+    first_name = models.CharField(max_length = 30, default='', null = True, blank=True)
+    last_name = models.CharField(max_length = 30, default='', null = True, blank=True)
+    email = models.EmailField(max_length = 30, default='', null = True, blank=True)
+    password = models.CharField(max_length = 30, default='', null = True, blank=True)
     contact = models.IntegerField(default='',null = True, blank=True)
     
     def __str__(self):

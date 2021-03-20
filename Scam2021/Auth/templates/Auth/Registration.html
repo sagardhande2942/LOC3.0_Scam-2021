@@ -1,16 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/regi.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/Auth/CSS/regi.css"/>
     <title>Registration</title>
   </head>
   <body>
+
+
     <nav class="navbar navbar-expand-lg ">
       <a class="navbar-brand" href="#"><i class="fa fa-user-md" aria-hidden="true"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,8 +29,8 @@
               <a class="nav-link" href="#consult">Consult Now</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <a href="login.html" class="btn btn-success" role="button">LOGIN</a>
+        <form class="form-inline my-2 my-lg-0" >
+          <a href="/login" class="btn btn-success" role="button">LOGIN</a>
         </form>
       </div>
     </nav>
@@ -39,31 +42,32 @@
         </aside></div>
         <section class="regi">
             <h1>Welcome to the Virtual Clinic</h1>
-            <form>
+            <form method="POST"> 
+              {% csrf_token %}
                 <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name" required>
+                    <input type="text" name = 'fname' class="form-control" id="formGroupExampleInput" placeholder="First Name" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last Name" required>
+                    <input type="text" name = 'lname' class="form-control" id="formGroupExampleInput2" placeholder="Last Name" required>
                   </div>
                   <div class="form-group">
-                      <input class="form-control" type="tel" pattern=".{10}" id="example-tel-input" placeholder="Contact No." required>
+                      <input class="form-control" name = 'contact' type="tel" pattern=".{10}" id="example-tel-input" placeholder="Contact No." required>
                     </div>
                 <div class="form-group">
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" required>
+                  <input type="email" class="form-control" name = 'email' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" required>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  id="exampleInputPassword1" placeholder="Password" required>
+                  <input type="password" class="form-control" name = 'password' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  id="exampleInputPassword1" placeholder="Password" required>
                 </div>
                 <h6>Must contain at least one number and <br/>one uppercase 
                 and lowercase letter, and at least 8 char</h6>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input"  id="docCheck" onclick="myFunction()">
+                  <input type="checkbox" name = 'pdcheck' class="form-check-input"  id="docCheck" onclick="myFunction()">
                   <label class="form-check-label" for="exampleCheck1">Are you a doctor?</label>
                 </div>
                 <div class="form-group" id="special" style="display:none">
                   <label for="specialisation">Specialisation</label>
-                  <select class="form-control" required >
+                  <select class="form-control" name = 'spec' required >
                     <option>BDS</option>
                     <option>MBBS</option>
                     <option>Gynaecology</option>
@@ -73,7 +77,7 @@
                 <div class="spacing">
                 <button type="submit" class="btn btn-success register">REGISTER</button></div><br/>
               </form>
-              <h4 align="center">Already an user? <a href="login.html">Login</a></h4>
+              <h4 align="center">Already an user? <a href="/login">Login</a></h4>
         </section>
     </div>
     </div>
