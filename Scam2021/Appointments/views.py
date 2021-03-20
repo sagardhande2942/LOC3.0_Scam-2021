@@ -9,18 +9,18 @@ from django.contrib.auth.decorators import login_required
 @user_is_patient
 def book(request):
     try:
-        patient = Patient.objects.get(user_id_id = request.data['user_id'])
-        doctor = Doctor.objects.get(id = request.data['doctor_id'])
+        patient = Patient.objects.get(user_id_id = request.POST.get['user_id'])
+        doctor = Doctor.objects.get(id = request.POST.get['doctor_id'])
     except Patient.DoesNotExist or Doctor.DoesNotExist:
         raise PermissionDenied
 
     appointment = Appointment.objects.create(patient_id = patient,
     doctor_id = doctor,
-    date = request.data['date'],
-    time = request.data['time'],
+    date = request.POST.get['date'],
+    time = request.POST.get['time'],
     is_approved = None,
-    reason = request.data['reason'],
-    prior_reports = request.data['prior_reports'])
+    reason = request.POST.get['reason'],
+    prior_reports = request.POST.get['prior_reports'])
     
     return render(request, template_name= '', context={'appointment' : appointment})
 
@@ -31,7 +31,7 @@ def book(request):
 @user_is_doctor
 def approve(request):
     try:
-        doctor = Doctor.objects.get(user_id_id = request.data['user_id'])
+        doctor = Doctor.objects.get(user_id_id = request.POST.get['user_id'])
     except Doctor.DoesNotExist:
         raise PermissionDenied
     doctor_appointments = Appointment.objects.filter(doctor_id = doctor, is_approved = None)
