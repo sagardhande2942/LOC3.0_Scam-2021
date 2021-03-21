@@ -52,7 +52,7 @@
         </nav>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Specialisation</label>
-          <select class="form-control" id="specialisation" onchange="searchspec(this);">
+          <select class="form-control specialisation" >
             <option>Diabetologist</option>
             <option>General Physician</option>
             <option>Gynaecologist</option>
@@ -80,7 +80,7 @@
                   </div>
                   <div class="card-body" id="o">
                     <p class="card-title" id="c1">Dr. Ashish Shah</p>
-                    <p class="card-text"><span id = 'z1'>General Physician</span>, 10 years of experience<br />Konkani Hospital</p>
+                    <p class="card-text"><div id="z1">Diabetologist</div>, 10 years of experience<br />Konkani Hospital</p>
                     <p class="card-text"><b>Chembur, Mumbai<br /><span>Consulation Fee: Rs. 1000</span></b></p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@
                   </div>
                   <div class="card-body">
                     <p class="card-title" id="c2">Dr. Smriti Gongalez</p>
-                    <p class="card-text"><span id = 'z2'>Gynaecologist</span>, 6 years of experience<br />Karnavati Hospital</p>
+                    <p class="card-text"><div id="z2">Gynaecologist</div>, 6 years of experience<br />Karnavati Hospital</p>
                     <p class="card-text"><b>Andheri, Mumbai<br /><span>Consulation Fee: Rs. 2000</span></b></p>
                   </div>
                 </div>
@@ -130,7 +130,7 @@
                   </div>
                   <div class="card-body">
                     <p class="card-title" id="c3">Dr. Rajendra Sharma</p>
-                    <p class="card-text" ><span id="z3">General Physician</span>, 10 years of experience<br />Konkani Hospital</p>
+                    <p class="card-text" ><div id="z3">General Physician</div>, 10 years of experience<br />Konkani Hospital</p>
                     <p class="card-text"><b>Chembur, Mumbai<br /><span>Consulation Fee: Rs. 1000</span></b></p>
                   </div>
                 </div>
@@ -153,7 +153,7 @@
                   </div>
                   <div class="card-body">
                     <p class="card-title" id="c4">Dr. Varija Verma</p>
-                    <p class="card-text" ><span id="z4">Gynaecologist</span>, 6 years of experience<br />Karnavati Hospital</p>
+                    <p class="card-text" ><div id="z4">Physiotherapist</div>, 6 years of experience<br />Karnavati Hospital</p>
                     <p class="card-text"><b>Andheri, Mumbai<br /><span>Consulation Fee: Rs. 2000</span></b></p>
                   </div>
                 </div>
@@ -212,19 +212,28 @@
         }
       }
 
-      function searchspec(a){
-        var z = 'z';
-        var req = document.getElementById('specialization').value;
-        console.log(req);
-        for(var i = 1; i <= 4; i++){
-          var b = document.getElementById(z + i).value
-          if(b == req){
-              var e = b.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
-              var f = document.getElementById(e).innerHTML
-              document.getElementById('results').innerHTML = f;
+      // function searchspec(a){
+        $(document).ready(function(){
+          
+          $("select.specialisation").change(function(){
+          document.getElementById('results').innerHTML = backup; 
+          console.log('hii');
+          var selectedCountry = $(this).children("option:selected").val();
+          var z = 'z';
+          var req = selectedCountry;
+          
+          for(var i = 1; i <= 4; i++){
+            var b = document.querySelector("#z" + i)
+            if(b.innerText == req){
+                var e = b.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+                console.log(e);
+                var f = document.getElementById(e).innerHTML;
+                document.getElementById('results').innerHTML = f;
+            }
           }
-        }
-      }
+      });
+      });
+
 
     </script>
 </body>
