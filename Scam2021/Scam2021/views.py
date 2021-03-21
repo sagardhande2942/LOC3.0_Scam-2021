@@ -42,4 +42,4 @@ def predictdis(request):
         'a':result,
     }
     print(result)
-    return render(request, 'details.html', dict1)
+    return render(request, 'FindMyDoc.html', dict1)
