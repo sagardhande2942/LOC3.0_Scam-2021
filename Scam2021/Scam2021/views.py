@@ -3,9 +3,22 @@ from django.http.response import HttpResponse, HttpResponseBadRequest, JsonRespo
 from django.shortcuts import render
 from .Dis_Test import RFTest
 
+# app.config["MAIL_SERVER"] = 'smtp.gmail.com'
+# app.config["MAIL_PORT"] = 465
+# app.config["MAIL_USERNAME"] = 'ronshawn29@gmail.com'
+# app.config['MAIL_PASSWORD'] = 'ViS29@@@'
+# app.config['MAIL_USE_TLS'] = False
+# app.config['MAIL_USE_SSL'] = True
+
 d = RFTest()
 dict1 = {}
 def details(request):
+    # email2 = 'dhandesagar78@gmailcom'
+
+    # print(email2)
+    # msg = Message('OTP', sender='username@gmail.com', recipients=[email2])
+    # msg.body = str('Appointment Booked')
+    # mail.send(msg)
     return render(request, 'details.html', dict1)
 
 def index(request):
