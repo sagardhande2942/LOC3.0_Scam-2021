@@ -29,6 +29,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#consult">Consult Now</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Auth/chat/">Chat</a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <a href="Registration.html" class="btn btn-success" role="button">REGISTER</a>
@@ -52,7 +55,7 @@
         </nav>
         <div class="form-group">
           <label for="exampleFormControlSelect1">Specialisation</label>
-          <select class="form-control specialisation" >
+          <select id='spec' class="form-control specialisation">
             <option>Diabetologist</option>
             <option>General Physician</option>
             <option>Gynaecologist</option>
@@ -62,107 +65,110 @@
         </div>
       </div>
     </div>
-    <h3 style="color: black; text-align: center; margin-top: 7px;">According to the symptoms you filled the possible disease is : <b style="color: red;">{{a}}</b></h3>
+    <h3 style="color: black; text-align: center; margin-top: 7px;">According to the symptoms you filled the possible
+      disease is : <b style="color: red;">{{a}}</b></h3>
 
     <div id="results">
-      <a href = '/details/'>
-      <div id="d1">
+        <div id="d1">
 
-        <div class="container" id="h">
-          <div class="row" id="e">
-            <div class="col-12 mt-3" id="l">
-              <div class="card" id="o">
-                <div class="card-horizontal" id="b">
-                  <div class="img-square-wrapper">
-                    <img class="doc"
-                      src="https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I="
-                      width="300px" height="200px" alt="doc">
+          <div class="container" id="h">
+            <div class="row" id="e">
+              <div class="col-12 mt-3" id="l">
+                <div class="card" id="o">
+                  <div class="card-horizontal" id="b">
+                    <div class="img-square-wrapper">
+                      <img class="doc"
+                        src="https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I="
+                        width="300px" height="200px" alt="doc">
+                    </div>
+                    <div class="card-body" id="o">
+                      <p class="card-title" id="c1">Dr. Ashish Shah</p>
+                      <p class="card-text">
+                      <div id="z1">Diabetologist</div>, 10 years of experience<br />Konkani Hospital</p>
+                      <p class="card-text"><b>Chembur, Mumbai<br /><span>Consulation Fee: Rs. 1000</span></b></p>
+                    </div>
                   </div>
-                  <div class="card-body" id="o">
-                    <p class="card-title" id="c1">Dr. Ashish Shah</p>
-                    <p class="card-text"><div id="z1">Diabetologist</div>, 10 years of experience<br />Konkani Hospital</p>
-                    <p class="card-text"><b>Chembur, Mumbai<br /><span>Consulation Fee: Rs. 1000</span></b></p>
-                  </div>
+                  <a href="/details/" class="btn btn-danger" role="button">Book Now</a>
                 </div>
-                <a href="details.html" class="btn btn-danger" role="button">Book Now</a>
-              </div>
 
-            </div>
-          </div>
-
-
-        </div>
-      </div>
-    </a>
-      <div id="d2">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                <div class="card-horizontal">
-                  <div class="img-square-wrapper">
-                    <img class="doc"
-                      src="https://diverseeducation.com/wp-content/themes/responsive/timthumb.php?src=https%3A%2F%2Fimages-diverse.s3.amazonaws.com%2Fuploads%2F2020%2F12%2F07152536%2FDavila-Montero-1-1-e1615822390751.jpg&q=90&w=300&h=180&zc=1"
-                      width="300px" height="200px" alt="doc">
-                  </div>
-                  <div class="card-body">
-                    <p class="card-title" id="c2">Dr. Smriti Gongalez</p>
-                    <p class="card-text"><div id="z2">Gynaecologist</div>, 6 years of experience<br />Karnavati Hospital</p>
-                    <p class="card-text"><b>Andheri, Mumbai<br /><span>Consulation Fee: Rs. 2000</span></b></p>
-                  </div>
-                </div>
-                <a href="details.html" class="btn btn-danger" role="button">Book Now</a>
               </div>
             </div>
+
+
           </div>
         </div>
-      </div>
-      <div id="d3">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                <div class="card-horizontal">
-                  <div class="img-square-wrapper">
-                    <img class="doc"
-                      src="https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I="
-                      width="300px" height="200px" alt="doc">
+        <div id="d2">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                      <img class="doc"
+                        src="https://diverseeducation.com/wp-content/themes/responsive/timthumb.php?src=https%3A%2F%2Fimages-diverse.s3.amazonaws.com%2Fuploads%2F2020%2F12%2F07152536%2FDavila-Montero-1-1-e1615822390751.jpg&q=90&w=300&h=180&zc=1"
+                        width="300px" height="200px" alt="doc">
+                    </div>
+                    <div class="card-body">
+                      <p class="card-title" id="c2">Dr. Smriti Gongalez</p>
+                      <p class="card-text">
+                      <div id="z2">Gynaecologist</div>, 6 years of experience<br />Karnavati Hospital</p>
+                      <p class="card-text"><b>Andheri, Mumbai<br /><span>Consulation Fee: Rs. 2000</span></b></p>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <p class="card-title" id="c3">Dr. Rajendra Sharma</p>
-                    <p class="card-text" ><div id="z3">General Physician</div>, 10 years of experience<br />Konkani Hospital</p>
-                    <p class="card-text"><b>Chembur, Mumbai<br /><span>Consulation Fee: Rs. 1000</span></b></p>
-                  </div>
+                  <a href="/details/" class="btn btn-danger" role="button">Book Now</a>
                 </div>
-                <a href="details.html" class="btn btn-danger" role="button">Book Now</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="d4">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 mt-3">
-              <div class="card">
-                <div class="card-horizontal">
-                  <div class="img-square-wrapper">
-                    <img class="doc"
-                      src="https://diverseeducation.com/wp-content/themes/responsive/timthumb.php?src=https%3A%2F%2Fimages-diverse.s3.amazonaws.com%2Fuploads%2F2020%2F12%2F07152536%2FDavila-Montero-1-1-e1615822390751.jpg&q=90&w=300&h=180&zc=1"
-                      width="300px" height="200px" alt="doc">
+        <div id="d3">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                      <img class="doc"
+                        src="https://media.istockphoto.com/photos/portrait-of-smiling-handsome-man-in-blue-tshirt-standing-with-crossed-picture-id1045886560?k=6&m=1045886560&s=612x612&w=0&h=hXrxai1QKrfdqWdORI4TZ-M0ceCVakt4o6532vHaS3I="
+                        width="300px" height="200px" alt="doc">
+                    </div>
+                    <div class="card-body">
+                      <p class="card-title" id="c3">Dr. Rajendra Sharma</p>
+                      <p class="card-text">
+                      <div id="z3">General Physician</div>, 10 years of experience<br />Konkani Hospital</p>
+                      <p class="card-text"><b>Chembur, Mumbai<br /><span>Consulation Fee: Rs. 1000</span></b></p>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <p class="card-title" id="c4">Dr. Varija Verma</p>
-                    <p class="card-text" ><div id="z4">Physiotherapist</div>, 6 years of experience<br />Karnavati Hospital</p>
-                    <p class="card-text"><b>Andheri, Mumbai<br /><span>Consulation Fee: Rs. 2000</span></b></p>
-                  </div>
+                  <a href="/details/" class="btn btn-danger" role="button">Book Now</a>
                 </div>
-                <a href="details.html" class="btn btn-danger" role="button">Book Now</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <div id="d4">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mt-3">
+                <div class="card">
+                  <div class="card-horizontal">
+                    <div class="img-square-wrapper">
+                      <img class="doc"
+                        src="https://diverseeducation.com/wp-content/themes/responsive/timthumb.php?src=https%3A%2F%2Fimages-diverse.s3.amazonaws.com%2Fuploads%2F2020%2F12%2F07152536%2FDavila-Montero-1-1-e1615822390751.jpg&q=90&w=300&h=180&zc=1"
+                        width="300px" height="200px" alt="doc">
+                    </div>
+                    <div class="card-body">
+                      <p class="card-title" id="c4">Dr. Varija Verma</p>
+                      <p class="card-text">
+                      <div id="z4">Physiotherapist</div>, 6 years of experience<br />Karnavati Hospital</p>
+                      <p class="card-text"><b>Andheri, Mumbai<br /><span>Consulation Fee: Rs. 2000</span></b></p>
+                    </div>
+                  </div>
+                  <a href="/details/" class="btn btn-danger" role="button">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -176,7 +182,28 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
     <script>
+ var backup = ''
+$(document).ready(function () {
+       backup = document.getElementById('results').innerHTML;
 
+
+        $("select.specialisation").change(function () {
+          document.getElementById('results').innerHTML = backup;
+          var selectedCountry = $(this).children("option:selected").val();
+          var z = 'z';
+          var req = selectedCountry;
+
+          for (var i = 1; i <= 4; i++) {
+            var b = document.querySelector("#z" + i)
+            if (b.innerText == req) {
+              var e = b.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
+              console.log('Hii' + e);
+              var f = document.getElementById(e).innerHTML;
+              document.getElementById('results').innerHTML = f;
+            }
+          }
+        });
+      });
       function diff(b) {
         lst = []
         str = ''
@@ -191,7 +218,6 @@
         return lst;
       }
 
-      var backup = document.getElementById('results').innerHTML;
       function iterate(a) {
         document.getElementById('results').innerHTML = backup;
         var l;
@@ -200,9 +226,10 @@
         for (var i = 1; i <= 4; i++) {
           var x = 'c' + i
           var c = document.querySelector('#' + x);
-          lst = diff(c.innerText);
+          var lst = diff(c.innerText);
           for (var gg in lst) {
-            if (b == lst[gg].trim()) {
+            console.log(lst[gg] + ' ' + b);
+            if (b == lst[gg]) {
               //  var e=a.id;
               var e = c.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
               var f = document.getElementById(e).innerHTML
@@ -213,26 +240,7 @@
       }
 
       // function searchspec(a){
-        $(document).ready(function(){
-          
-          $("select.specialisation").change(function(){
-          document.getElementById('results').innerHTML = backup; 
-          console.log('hii');
-          var selectedCountry = $(this).children("option:selected").val();
-          var z = 'z';
-          var req = selectedCountry;
-          
-          for(var i = 1; i <= 4; i++){
-            var b = document.querySelector("#z" + i)
-            if(b.innerText == req){
-                var e = b.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id;
-                console.log(e);
-                var f = document.getElementById(e).innerHTML;
-                document.getElementById('results').innerHTML = f;
-            }
-          }
-      });
-      });
+      
 
 
     </script>

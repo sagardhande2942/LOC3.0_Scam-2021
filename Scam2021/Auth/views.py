@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import *
+import mysql.connector
 
 def index(request):
     return render(request, 'Auth/login.html')
@@ -11,6 +12,27 @@ def home(request):
 def findDoc(request):
     return render(request, 'Auth/FindMyDoc.html')
 
+def chat(request):
+    # mydb = mysql.connector.connect(
+    # host="agri.cj9kv3v4akuv.us-east-2.rds.amazonaws.com",
+    # user="inferno",
+    # password="vishal2942",
+    # database="chat"
+    # )
+    # mycursor = mydb.cursor()
+    # a = request.body
+    # b = a.decode("utf-8")
+
+    # mycursor.execute('INSERT INTO chat values(%s, %s)', ('Sagar', b,))
+    # mycursor.execute('SELECT msg FROM chat WHERE NAME = %s', ('Sagar'))
+    # c = mycursor.fetchone()
+    # dictt = {
+    #     'c' : c
+    # }
+    return render(request, 'Auth/chat.html')
+
+def booked(request):
+    return render(request, 'Auth/booked.html')
 
 def register(request):
     if request.method == 'POST':
