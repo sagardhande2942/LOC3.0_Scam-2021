@@ -7,5 +7,7 @@ urlpatterns = [
     path('login/',views.index, name = 'index'),
     # path('login/',views.register, name = 'register'),
     path('loginauth/',views.login, name = 'login'),
-    path('register/',views.register, name = 'register')
+    path('register/',views.register, name = 'register'),
+    path('home/', views.home, name = 'home'),
+    path('FindMyDoc/', views.findDoc, name = 'finddoc')
 ]

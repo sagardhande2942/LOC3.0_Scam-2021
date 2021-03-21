@@ -4,6 +4,14 @@ from .models import *
 def index(request):
     return render(request, 'Auth/login.html')
 
+def home(request):
+    return render(request, 'Auth/home.html')
+
+
+def findDoc(request):
+    return render(request, 'Auth/FindMyDoc.html')
+
+
 def register(request):
     if request.method == 'POST':
         demail = request.POST.get('email','')
@@ -23,25 +31,25 @@ def register(request):
     return render(request, 'Auth/Registration.html')
 
 def login(request):
-    if request == 'POST':
-        pdcheck = request.POST.get('pdcheck','false')
-        if pdcheck == 'false':
-            pemail = request.POST.get('email','')
-            ppass = request.POST.get('pass','')
-            p = Users.objects.filter(email = pemail)
-            check = False
-            if p.password == ppass:
-                check = True
+    # if request == 'POST':
+    #     pdcheck = request.POST.get('pdcheck','false')
+    #     if pdcheck == 'false':
+    #         pemail = request.POST.get('email','')
+    #         ppass = request.POST.get('pass','')
+    #         p = Users.objects.filter(email = pemail)
+    #         check = False
+    #         if p.password == ppass:
+    #             check = True
             
-            if check == True:
-                return render(request, 'login')
+    #         if check == True:
+    #             return render(request, 'login')
 
-        else:
-            demail = request.POST.get('email','')
-            dpass = request.POST.get('pass','')
-            d = Users.objects.filter(email = demail)
-            check = False
-            if d.password == dpass:
-                check = True
-            if check == True:
-                return render(request, 'login')
+    #     else:
+    #         demail = request.POST.get('email','')
+    #         dpass = request.POST.get('pass','')
+    #         d = Users.objects.filter(email = demail)
+    #         check = False
+    #         if d.password == dpass:
+    #             check = True
+    #         if check == True:
+    return render(request, 'Auth/home')

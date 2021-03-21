@@ -7,14 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/home.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/Auth/CSS/home.css"/>
     <title>Virtual Clinic</title>
   </head>
   <body>
       <div class="content">
       <div class="landing">
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <a class="navbar-brand" href="#home"><i class="fa fa-user-md" aria-hidden="true"></i></a>
+    <nav class="navbar navbar-expand-lg sticky-top" id='homenav'>
+        <a class="navbar-brand" href="#"><i class="fa fa-user-md" aria-hidden="true"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About Us</a>
@@ -43,14 +43,14 @@
         <h1 class="display-4">Welcome to the Virtual Clinic!</h1>
         <p class="lead">We are happy to assist you.</p>
 
-          <a class="btn btn-danger btn-lg" id="bt" href="FindMyDoc.html" role="button">Find my doctor</a>
+          <a class="btn btn-danger btn-lg" id="bt" href="/FindMyDoc/" role="button">Find my doctor</a>
       </div></div>
       <h4 align="center">About Us</h4>
       <div id="about">
           <div class="container about">
               <div class="row">
                   <div class="col col-sm-4">
-                <img src="../templates/img/doc.png" alt="doctors" width="70%"/></div>
+                <img src="/static/Auth/img/doc.png" alt="doctors" width="70%"/></div>
                 <div class="col col-sm-8">Every day, Ali Spikestein, MS, Certified Child Life Specialist, brings smiles to her young patients and their families who are being treated at the Mount Sinai Blau Center for Children’s Cancer and Blood Disease. She credits her work partner for many of those happy faces, though. That is because Ali is a facility dog handler and her partner is Professor, a golden doodle who has been on the Mount Sinai Hospital staff since 2017. Professor is one of three facility dogs who work full-time as part of the Paws & Play program in the Child Life and Creative Arts Therapy Department.</p>
                 </div>
                 </div>
@@ -58,11 +58,11 @@
                   <div class="col col-sm-8">Every day, Ali Spikestein, MS, Certified Child Life Specialist, brings smiles to her young patients and their families who are being treated at the Mount Sinai Blau Center for Children’s Cancer and Blood Disease. She credits her work partner for many of those happy faces, though. That is because Ali is a facility dog handler and her partner is Professor, a golden doodle who has been on the Mount Sinai Hospital staff since 2017. Professor is one of three facility dogs who work full-time as part of the Paws & Play program in the Child Life and Creative Arts Therapy Department.</p>
                   </div>
                   <div class="col col-sm-4">
-                    <img src="../templates/img/doc.png" alt="doctors" width="70%"/></div>
+                    <img src="/static/Auth/img/doc.png" alt="doctors" width="70%"/></div>
                   </div>
                   <div class="row">
                     <div class="col col-sm-4">
-                  <img src="../templates/img/doc.png" alt="doctors" width="70%"/></div>
+                  <img src="/static/Auth/img/doc.png" alt="doctors" width="70%"/></div>
                   <div class="col col-sm-8">Every day, Ali Spikestein, MS, Certified Child Life Specialist, brings smiles to her young patients and their families who are being treated at the Mount Sinai Blau Center for Children’s Cancer and Blood Disease. She credits her work partner for many of those happy faces, though. That is because Ali is a facility dog handler and her partner is Professor, a golden doodle who has been on the Mount Sinai Hospital staff since 2017. Professor is one of three facility dogs who work full-time as part of the Paws & Play program in the Child Life and Creative Arts Therapy Department.</p>
                   </div>
                   </div>
@@ -86,7 +86,7 @@
     <h5 class="widget-title">Quick Links<span></span></h5>
     <ul class="thumbnail-widget">
     <li>
-    <div class="thumb-content"><a href="home.html">Home</a></div>	
+    <div class="thumb-content"><a href="#">Home</a></div>	
     </li>
     <li>
     <div class="thumb-content"><a href="#about">About Us</a></div>	
@@ -99,7 +99,7 @@
     <div class="widget no-box">
     <h5 class="widget-title">Get Started<span></span></h5>
     <p>Book your apointment now.</p>
-    <a class="btn btn-lg btn-success" href="Registration.html" target="_blank">Register Now</a>
+    <a class="btn btn-lg btn-success" href="/register" target="_blank">Register Now</a>
     </div>
     </div>
     
