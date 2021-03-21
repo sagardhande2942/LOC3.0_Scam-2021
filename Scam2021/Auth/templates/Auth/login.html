@@ -50,7 +50,8 @@
       </div>
       <div class="container">
         <h1 align="center">Welcome to the Virtual Clinic</h1>
-        <form action = '/home/'>
+        <form action = '/loginauth/' method="POST">
+          {% csrf_token %}
           <div class="form-group">
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" required>
           </div>
@@ -58,9 +59,9 @@
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
           </div>
           <hr>
-          <div class="form-check">
+          <div class="form-check" style="text-align: center;">
             <input type="checkbox" name = 'pdcheck' class="form-check-input"  id="docCheck" onclick="myFunction()">
-            <label class="form-check-label" for="exampleCheck1">Are you a doctor?</label>
+            <label class="form-check-label" for="exampleCheck1" >Are you a doctor?</label>
           </div>
           <br>
           <div class="bton">

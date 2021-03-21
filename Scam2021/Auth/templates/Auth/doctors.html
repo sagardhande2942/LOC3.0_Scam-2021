@@ -7,13 +7,19 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/doctors.css">
+    <link rel="stylesheet" href="/static/Auth/CSS/doctors.css">
     <title>Doctors appointment list</title>
+    <style>
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand" href="#"><i class="fa fa-user-md" aria-hidden="true"></i></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="/static/Auth/img/medicalreport.jpg"><i class="fa fa-user-md" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="/static/Auth/img/medicalreport.jpgnavbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
@@ -26,24 +32,24 @@
         </div>
       </nav>
       <div class="mardo">
-      <span class="badge badge-pill badge-info" id="pending">246 Pending</span>
-      <span class="badge badge-pill badge-danger" id="rejected">2 Rejected</span>
-      <span class="badge badge-pill badge-success" id="accepted">5 Accepted</span>
+      <span class="badge badge-pill badge-info" id="pending">8 Pending</span>
+      <span class="badge badge-pill badge-danger" id="rejected">0 Rejected</span>
+      <span class="badge badge-pill badge-success" id="accepted">0 Accepted</span>
       </div>
       <div class="container justify-content-center" >
 <div class="card-deck">
     
     <div class="card" id="c1" >
         <div class="card-body">
-          <h5 class="card-title">FULL NAME</h5>
+          <h5 class="card-title">Pravin Kumar</h5>
           <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
           <hr>
-          <p>DATE</p>
+          <p>DATE : 21/03/21</p>
           <hr>
-          <p>TIME</p>
+          <p>TIME : 4:29 AM</p>
         </div>
         <div class="card-body" id="maro">
-            <a href="#" class="card-link">Uploaded Records</a><hr>
+            <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
             <div class="spacing" id="mujhe">
               <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
             <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -54,15 +60,15 @@
     
         <div class="card" id="c2">
             <div class="card-body">
-              <h5 class="card-title">FULL NAME</h5>
+              <h5 class="card-title">Aakash Shukla</h5>
               <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
               <hr>
-              <p>DATE</p>
+              <p>DATE : 21/03/21</p>
               <hr>
-              <p>TIME</p>
+              <p>TIME : 03:56 AM</p>
             </div>
             <div class="card-body">
-                <a href="#" class="card-link">Uploaded Records</a><hr>
+                <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
                 <div class="spacing">
                   <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
                 <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -73,15 +79,15 @@
     
         <div class="card" id="c3" >
             <div class="card-body">
-              <h5 class="card-title">FULL NAME</h5>
+              <h5 class="card-title">Rohan Das</h5>
               <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
               <hr>
-              <p>DATE</p>
+              <p>DATE : 21/03/21</p>
               <hr>
-              <p>TIME</p>
+              <p>TIME : 1:09 AM</p>
             </div>
             <div class="card-body">
-                <a href="#" class="card-link">Uploaded Records</a><hr>
+                <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
                 <div class="spacing">
                   <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
                 <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -91,15 +97,15 @@
     
         <div class="card" id="c4">
             <div class="card-body">
-              <h5 class="card-title">FULL NAME</h5>
+              <h5 class="card-title">Kamal Band</h5>
               <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
               <hr>
-              <p>DATE</p>
+              <p>DATE : 21/03/21</p>
               <hr>
-              <p>TIME</p>
+              <p>TIME : 3:02 AM</p>
             </div>
             <div class="card-body">
-                <a href="#" class="card-link">Uploaded Records</a><hr>
+                <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
                 <div class="spacing">
                   <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
                 <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -115,15 +121,15 @@
     
     <div class="card" id="c5">
         <div class="card-body">
-          <h5 class="card-title">FULL NAME</h5>
+          <h5 class="card-title">Romeo Rodruiguez</h5>
           <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
           <hr>
-          <p>DATE</p>
+          <p>DAT : 21/03/21</p>
           <hr>
-          <p>TIME</p>
+          <p>TIME : 1:39 AM</p>
         </div>
         <div class="card-body">
-            <a href="#" class="card-link">Uploaded Records</a><hr>
+            <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
             <div class="spacing">
               <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
             <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -134,15 +140,15 @@
     
     <div class="card" id="c6">
         <div class="card-body">
-          <h5 class="card-title">FULL NAME</h5>
+          <h5 class="card-title">Bewafa Harris</h5>
           <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
           <hr>
-          <p>DATE</p>
+          <p>DATE : 21/03/21</p>
           <hr>
-          <p>TIME</p>
+          <p>TIME : 8:20 AM</p>
         </div>
         <div class="card-body">
-            <a href="#" class="card-link">Uploaded Records</a><hr>
+            <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
             <div class="spacing">
               <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
             <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -152,15 +158,15 @@
     
     <div class="card" id="c7" >
         <div class="card-body">
-          <h5 class="card-title">FULL NAME</h5>
+          <h5 class="card-title">Test2</h5>
           <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
           <hr>
-          <p>DATE</p>
+          <p>DATE : 21/03/21</p>
           <hr>
-          <p>TIME</p>
+          <p>TIME : 01:20 AM</p>
         </div>
         <div class="card-body">
-            <a href="#" class="card-link">Uploaded Records</a><hr>
+            <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
             <div class="spacing">
               <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
             <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>
@@ -169,15 +175,15 @@
     </div>
     <div class="card" id="c8">
         <div class="card-body">
-          <h5 class="card-title">FULL NAME</h5>
+          <h5 class="card-title">Test3</h5>
           <p class="card-text">Brief description of the problem At nonumy et ut labore dolor gubergren eos consetetur aliquyam gubergren. No dolore ipsum est rebum consetetur sit et, eirmod eirmod sed rebum dolore invidunt.</p>
           <hr>
-          <p>DATE</p>
+          <p>DATE : 21/03/21</p>
           <hr>
-          <p>TIME</p>
+          <p>TIME : 3:09 AM</p>
         </div>
         <div class="card-body">
-            <a href="#" class="card-link">Uploaded Records</a><hr>
+            <a href="/static/Auth/img/medicalreport.jpg" class="card-link">Uploaded Records : <img src = '/static/Auth/img/medicalreport.jpg'></a><hr>
             <div class="spacing">
               <button class="btn btn-success xyz" onclick="cardopen(this); return false">Accept</button>
             <button class="btn btn-danger xyz" onclick="cardclose(this); return false">Reject</button>

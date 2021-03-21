@@ -52,4 +52,11 @@ def login(request):
     #         if d.password == dpass:
     #             check = True
     #         if check == True:
-    return render(request, 'Auth/home')
+
+    if request.method == 'POST':
+        pdcheck = request.POST.get('pdcheck','off')
+        if pdcheck == 'on':
+            return render(request,'Auth/doctors.html')
+        
+        else:
+            return render(request, 'Auth/home.html')
