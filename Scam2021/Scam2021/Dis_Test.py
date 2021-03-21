@@ -10,9 +10,9 @@ import pickle
 class RFTest:
 
     def __init__(self):
-        self.filename = "C:/Users/dhand/OneDrive/Desktop/LOC4/LOC3.0_Scam-2021/Scam2021/Scam2021/RF_disease.sav"
-        # self.df = pd.read_csv('C:/Users/dhand/OneDrive/Desktop/LOC4/LOC3.0_Scam-2021/Scam2021/Scam2021/dataset.csv')
-        self.df = pd.read_csv('C:/Users/dhand/OneDrive/Desktop/LOC4/LOC3.0_Scam-2021/Scam2021/Scam2021/Symptom-severity.csv')
+        self.filename = "/Users/mac/Desktop/LOC3.0_Scam-2021/Scam2021/Scam2021/Symptom-severity.csv"
+        # self.df = pd.read_csv('/Users/mac/Desktop/LOC3.0_Scam-2021/Scam2021/Scam2021/Symptom-severity.csv')
+        self.df = pd.read_csv('/Users/mac/Desktop/LOC3.0_Scam-2021/Scam2021/Scam2021/Symptom-severity.csv')
         # self.load_model()
 
     def load_model(self):
@@ -64,12 +64,12 @@ if __name__ == "__main__":
     a = []
     model = RFTest()
     # a = [2,8,5,3]
-    df1 = pd.read_csv('C:/Users/dhand/OneDrive/Desktop/LOC4/LOC3.0_Scam-2021/Scam2021/Scam2021/Symptom-severity.csv')
+    df1 = pd.read_csv('/Users/mac/Desktop/LOC3.0_Scam-2021/Scam2021/Scam2021/Symptom-severity.csv')
 
     symptoms = df1['Symptom'].unique()
     for x,i in  enumerate(symptoms) :
         print(x,i,end="//")
-    print("\nEnter Symptoms by their respective numbers")
+print("\nEnter Symptoms by their respective numbers")
     a = list(map(int, input().split()))
     x = len(a)
     for i in  range(x,17):
